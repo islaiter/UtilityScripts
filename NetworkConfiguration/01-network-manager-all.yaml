@@ -1,4 +1,4 @@
-# This is the network config written by 'iSlaiter'
+sud# This is the network config written by 'iSlaiter'
 # The file might have a different name, in that case, just change the name of this file to match it
 # Also, edit the IP address under addresses to match your IP range
 network:
@@ -6,8 +6,11 @@ network:
   ethernets:
     enp0s3:
       dhcp4: false
+      dhcp6: false
       addresses:
         - 192.168.1.207/24
-      gateway4: 192.168.1.1
+      routes:
+        - to: default
+          via: 192.168.1.1
       nameservers:
-        addresses: [80.58.61.250,8.8.8.8]
+        addresses: [8.8.4.4,8.8.8.8]
